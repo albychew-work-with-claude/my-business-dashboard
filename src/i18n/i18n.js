@@ -1,14 +1,15 @@
-// Interface language. English text in the code is the lookup key; zh.js holds the
-// Simplified Chinese for each key. A key without a translation falls back to English,
+// Interface language. This copy of the site is English only: the language menu is removed
+// and the page always starts in English. English text in the code is the lookup key; zh.js
+// still holds the Simplified Chinese for each key, so Chinese can be switched back on later. A key without a translation falls back to English,
 // and test/i18n.test.js fails when that happens.
 // {0}, {1}… are placeholders filled from the extra arguments, in any order.
 
 import ZH from './zh.js';
 
-export const DEFAULT_LOCALE = 'zh-CN';
+export const DEFAULT_LOCALE = 'en';
 let locale = DEFAULT_LOCALE;
 
-// 'zh…' → Chinese; 'en…' and 'ms' → English; anything else → the default (Chinese).
+// 'zh…' → Chinese; 'en…' and 'ms' → English; anything else → the default (English).
 export function normaliseLocale(value) {
   const v = String(value || '').trim().toLowerCase();
   if (v.startsWith('zh')) return 'zh-CN';

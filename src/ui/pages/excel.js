@@ -155,9 +155,9 @@ export function renderExcelStart() {
     t('p', tr('Orders are required (one order or invoice per row); customers, payments and stock are optional. A workbook laid out like the practice workbook below opens straight away; other sheet and column names are matched on the next screen. Columns you do not have leave the figures that use them blank or zero.'), 'small ink2'),
     h('div', { class: 'table-wrap' }, h('table', {},
       h('thead', {}, h('tr', {}, t('th', tr('Sheet in the practice workbook')), t('th', tr('Required columns')), t('th', tr('Other columns')))),
-      h('tbody', {}, ...cols.map(c => h('tr', {}, h('td', {}, h('b', {}, c.sheet), h('div', { class: 'small muted' }, names[c.sheet])), t('td', c.required.join(', '), 'mono'), t('td', c.optional.join(', '), 'mono small')))))),
+      h('tbody', {}, ...cols.map(c => h('tr', {}, h('td', {}, h('b', {}, c.sheet), names[c.sheet] !== c.sheet ? h('div', { class: 'small muted' }, names[c.sheet]) : null), t('td', c.required.join(', '), 'mono'), t('td', c.optional.join(', '), 'mono small')))))),
     h('ul', { class: 'small ink2' },
-      t('li', tr('status says whether an order is done, not whether it is paid: Confirmed, In Progress, Completed or Cancelled. Your own words (for example 已付 or Void) are matched to these. customer_type: Customer or Prospect. offering_type: Product or Service.')),
+      t('li', tr('status says whether an order is done, not whether it is paid: Confirmed, In Progress, Completed or Cancelled. Your own words (for example Done or Void) are matched to these. customer_type: Customer or Prospect. offering_type: Product or Service.')),
       t('li', tr('Dates as Excel dates, or written 2026-08-30 or 30/08/2026. Amounts as numbers, or written like RM 12.50.')),
       t('li', tr('The reporting date is the latest date in the file (sales, receipts, completions and stock counts). Everything is calculated as of that day.')))));
 

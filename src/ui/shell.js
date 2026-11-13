@@ -39,8 +39,6 @@ export function initShell() {
   backdrop.addEventListener('click', () => setMenu(false));
   nav.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); $('#menu-toggle').focus(); } });
-  const lang = $('#lang-select');
-  lang.addEventListener('change', () => { setLocale(lang.value); view.store.setPrefs({ locale: getLocale() }); rerender(); });
   // Another tab of this demo changed the saved state: show the same thing here.
   window.addEventListener('storage', e => {
     if (e.key !== null && !e.key.startsWith(PREFIX)) return;
@@ -52,7 +50,6 @@ export function initShell() {
 // Runs before every page render so the frame always matches the state.
 export function refreshShell() {
   document.title = tr('{0} · Business dashboard', businessName());
-  $('#lang-select').value = getLocale();
   $('#menu-toggle').setAttribute('aria-label', tr('Menu'));
   $('#nav').setAttribute('aria-label', tr('Sections'));
   $('#business-name').textContent = businessName();

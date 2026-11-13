@@ -544,7 +544,7 @@ export default {
   'Sheet in the practice workbook': '练习工作簿的工作表',
   'Required columns': '必需的列',
   'Other columns': '其他列',
-  'status says whether an order is done, not whether it is paid: Confirmed, In Progress, Completed or Cancelled. Your own words (for example 已付 or Void) are matched to these. customer_type: Customer or Prospect. offering_type: Product or Service.': 'status 指订单有没有做完，不是有没有付钱：Confirmed、In Progress、Completed 或 Cancelled。你自己的写法（例如「已付」「Void」）会对应到这几种。customer_type 是 Customer 或 Prospect；offering_type 是 Product 或 Service。',
+  'status says whether an order is done, not whether it is paid: Confirmed, In Progress, Completed or Cancelled. Your own words (for example Done or Void) are matched to these. customer_type: Customer or Prospect. offering_type: Product or Service.': 'status 指订单有没有做完，不是有没有付钱：Confirmed、In Progress、Completed 或 Cancelled。你自己的写法（例如「已付」「Void」）会对应到这几种。customer_type 是 Customer 或 Prospect；offering_type 是 Product 或 Service。',
   'Dates as Excel dates, or written 2026-08-30 or 30/08/2026. Amounts as numbers, or written like RM 12.50.': '日期用 Excel 日期，或写成 2026-08-30、30/08/2026。金额用数字，或写成 RM 12.50。',
   'The reporting date is the latest date in the file (sales, receipts, completions and stock counts). Everything is calculated as of that day.': '报告日期是文件里最新的日期（销售、收款、完成和库存盘点）。所有数字都按那一天计算。',
   'Start from a template': '从范例开始',

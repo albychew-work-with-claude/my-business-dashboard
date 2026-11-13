@@ -1,5 +1,5 @@
 /* Business Dashboard Starter — the redesigned look (Oct 2026): white rounded cards on a light warm-grey
-   canvas, the brand's 深酒红 wine for emphasis and a soft rose tint for selection, near-black
+   canvas, the brand's deep wine colour for emphasis and a soft rose tint for selection, near-black
    pill buttons. Light only by design. Every text colour was checked for at least 4.5:1 contrast
    on the surface it sits on (2026-10-20); chart colours are the validated steps of the earlier look
    (CVD ΔE ≥ 16, ≥ 3:1 on the card). Gold is decoration only, never text.
@@ -7,10 +7,10 @@
 :root {
   color-scheme: light;
   /* brand */
-  --brand: #5A1A2B;        /* 深酒红: emphasis, the reporting date, the dark alert card */
+  --brand: #5A1A2B;        /* deep wine: emphasis, the reporting date, the dark alert card */
   --brand-soft: #F3E1E8;   /* rose tint: selected menu item, the main figure's card */
   --brand-ink: #5A1A2B;    /* text on the rose tint (10:1) */
-  --gold: #B8963E;         /* 古铜金: decoration only (the logo stripe) */
+  --gold: #B8963E;         /* antique gold: decoration only (the logo stripe) */
   --page: #EFEDE9;         /* canvas behind the cards */
   --surface: #FFFFFF;      /* cards */
   --surface-2: #F5F3EF;    /* soft fill: hover, tracks, code, side panel items */

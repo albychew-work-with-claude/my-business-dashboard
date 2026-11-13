@@ -44,7 +44,8 @@ function boot() {
   view.persistent = persistent;
   view.storageReason = reason;
   const prefs = view.store.prefs();
-  setLocale(prefs.locale || 'zh-CN');
+  // English only: ignore any language saved by an earlier version of this page.
+  setLocale('en');
   // Your own Excel, if one was opened here before (kept in this browser).
   try { restoreWorkbook(); } catch (e) { console.error(e); }
   view.day = 'day1';

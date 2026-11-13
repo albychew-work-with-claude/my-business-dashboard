@@ -48,8 +48,8 @@ test('task-rule names, statuses and record types shown on screen are translated'
   assert.deepEqual(needed.filter(k => !(k in ZH)), []);
 });
 
-test('language setting: Chinese by default, English on request', () => {
-  assert.equal(normaliseLocale(''), 'zh-CN');
+test('language setting: English by default, Chinese on request', () => {
+  assert.equal(normaliseLocale(''), 'en');
   assert.equal(normaliseLocale('zh-CN'), 'zh-CN');
   assert.equal(normaliseLocale('en'), 'en');
   setLocale('zh-CN');
